@@ -99,7 +99,7 @@ func (server *Server) serveCodec(cc codec.Codec) {
 				break // 无法恢复的错误
 			}
 			// 设置响应 header 错误信息
-			req.h.Err = err.Error()
+			req.h.Error = err.Error()
 			// 发送错误响应
 			server.sendResponse(cc, req.h, invalidRequest, sending)
 			continue

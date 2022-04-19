@@ -10,7 +10,7 @@ type Header struct {
 	// Seq 是请求的序号，也可以认为是某个请求的 ID，用来区分不同的请求。
 	Seq uint64
 	// Error 是错误信息，客户端置为空，服务端如果如果发生错误，将错误信息置于 Error 中。
-	Err string
+	Error string
 }
 
 // Codec 对消息体进行编解码的接口
